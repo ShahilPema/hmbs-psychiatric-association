@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-04-21T16:48:08-0500",
+  "git_sha": "debabab4c2bbdbf1f93f09ac2b500c54fb1299fe",
+  "clinvar_vcf": {
+    "path": "data/clinvar_20251013.vcf.gz",
+    "md5": "5524de2068e04e1441e68530baf3efb7",
+    "size_bytes": 174939681,
+    "hmbs_records": 688
+  },
+  "aou_filter": {
+    "path": "data/HMBS_Combined_AoUFilt.parquet",
+    "md5": "d822b0ce9c7bbb0b6949af5270591a2d",
+    "unique_ids": 426
+  },
+  "cohorts": [
+    {
+      "input_parquet": "/storage/zoghbi/home/u241617/Missense_Model/Missense_Predictor/Data/HMBS/HMBS_SCHEMA_ONLY.parquet",
+      "output_parquet": "inputs/HMBS_SCHEMA_ONLY.annotated.parquet",
+      "rows_in": 605,
+      "rows_after_aou": 416,
+      "rows_out": 416,
+      "cols_out": 1130
+    },
+    {
+      "input_parquet": "/storage/zoghbi/home/u241617/Missense_Model/Missense_Predictor/Data/HMBS/HMBS_Bipex_ONLY.parquet",
+      "output_parquet": "inputs/HMBS_Bipex_ONLY.annotated.parquet",
+      "rows_in": 212,
+      "rows_after_aou": 87,
+      "rows_out": 87,
+      "cols_out": 1033
+    },
+    {
+      "input_parquet": "/storage/zoghbi/home/u241617/Missense_Model/Missense_Predictor/Data/HMBS/HMBS_Combined.parquet",
+      "output_parquet": "inputs/HMBS_Combined.annotated.parquet",
+      "rows_in": 817,
+      "rows_after_aou": 503,
+      "rows_out": 503,
+      "cols_out": 1150
+    }
+  ]
+}

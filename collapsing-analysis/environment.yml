@@ -1,0 +1,35 @@
+# Minimal conda/mamba environment for the HMBS collapsing package.
+#
+# Recreates a fresh environment with the same top-level dependencies used for the
+# verified 2026-04-21 reference rerun. The bottom of this file records the exact
+# versions at that time; those are the pins known to reproduce
+# HMBS_Prob_with_AouFilt_HQ_vcf_20251013_rerun_20260421 bit-for-bit. For a fully
+# pinned, transitively-complete lock, see `environment.lock.yml` (use that for
+# byte-identical reproduction; use this file when you only need the top-level
+# contract and are okay letting the solver pick transitive deps).
+#
+# Create:
+#   mamba env create -n hmbs_collapsing -f environment.yml
+# Activate:
+#   mamba activate hmbs_collapsing
+#   export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
+#   export R_HOME=$CONDA_PREFIX/lib/R
+
+name: hmbs_collapsing
+channels:
+  - conda-forge
+dependencies:
+  # Python runtime — pinned to the minor version used for the reference rerun.
+  - python=3.12
+  # Core scientific stack. All versions below are what the 2026-04-21 rerun used.
+  - polars=1.40.0
+  - pandas=3.0.2
+  - numpy=2.4.3
+  - pyarrow=23.0.1
+  # Parallel execution + R integration for the exact CMH test.
+  - joblib=1.5.3
+  - rpy2=3.6
+  - r-base=4.5
+  # Excel writer used by write_excel.py.
+  - xlsxwriter=3.2.9
+  - openpyxl=3.1.5
