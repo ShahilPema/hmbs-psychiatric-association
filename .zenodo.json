@@ -1,0 +1,48 @@
+{
+  "title": "A Genetic and Biochemical Reassessment of Acute Intermittent Porphyria in Psychiatric Disorders",
+  "description": "Code supporting a reassessment of whether pathogenic HMBS variants — which cause acute intermittent porphyria (AIP) — are enriched in psychiatric populations. The repository contains a phenome-wide association study in the All of Us Research Program (v8) and a rare-variant burden (\"collapsing\") analysis in the SCHEMA and BipEx cohorts. Shahil Pema and Dany A. Issa contributed equally (co-first authors).",
+  "upload_type": "software",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Pema, Shahil",
+      "affiliation": "Baylor College of Medicine",
+      "orcid": "0000-0002-0741-8501"
+    },
+    {
+      "name": "Issa, Dany A.",
+      "affiliation": "Baylor College of Medicine",
+      "orcid": "0009-0008-0349-0478"
+    },
+    {
+      "name": "Weido, Blake A.",
+      "affiliation": "Baylor College of Medicine",
+      "orcid": "0009-0007-9515-1977"
+    },
+    {
+      "name": "Zoghbi, Anthony W.",
+      "affiliation": "Baylor College of Medicine",
+      "orcid": "0000-0002-3441-440X"
+    }
+  ],
+  "keywords": [
+    "acute intermittent porphyria",
+    "HMBS",
+    "phenome-wide association study",
+    "rare variant burden analysis",
+    "psychiatric genetics",
+    "All of Us",
+    "SCHEMA",
+    "BipEx"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.0000/XXXXX",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    }
+  ],
+  "communities": [],
+  "access_right": "open"
+}

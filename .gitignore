@@ -1,0 +1,107 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+.jupyter/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# pytest / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+
+# mypy / ruff
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.ruff_cache/
+
+# Genomics / data files that should never be committed
+*.vcf
+*.vcf.gz
+*.vcf.bgz
+*.bgen
+*.bgi
+*.bam
+*.bai
+*.cram
+*.crai
+*.fasta
+*.fa
+*.fa.gz
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.bed
+*.bim
+*.fam
+*.ped
+*.map
+*.gen
+*.sample
+*.h5
+*.hdf5
+*.mt/
+*.ht/
+
+# Tabular data — assume sensitive unless explicitly whitelisted
+*.csv
+*.tsv
+
+# Pipeline outputs
+Results/
+results/
+output/
+outputs/
+logs/
+*.log
+
+# OS / editor cruft
+Thumbs.db
+ehthumbs.db
+Desktop.ini

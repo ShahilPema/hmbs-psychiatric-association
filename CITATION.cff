@@ -1,0 +1,77 @@
+cff-version: 1.2.0
+# Note: Shahil Pema and Dany A. Issa are co-first authors (equal contribution).
+# The CFF schema does not have a formal co-first-author field; equal
+# contribution is recorded in the abstract below and signaled by listing
+# both authors first.
+message: "If you use this software, please cite both the software and the associated paper."
+title: "A Genetic and Biochemical Reassessment of Acute Intermittent Porphyria in Psychiatric Disorders"
+abstract: >-
+  Code supporting a reassessment of whether pathogenic HMBS variants — which
+  cause acute intermittent porphyria (AIP) — are enriched in psychiatric
+  populations. The repository contains a phenome-wide association study in
+  the All of Us Research Program (v8) and a rare-variant burden ("collapsing")
+  analysis in the SCHEMA and BipEx cohorts. Shahil Pema and Dany A. Issa
+  contributed equally to this work (co-first authors).
+type: software
+authors:
+  - given-names: Shahil
+    family-names: Pema
+    affiliation: Baylor College of Medicine
+    orcid: "https://orcid.org/0000-0002-0741-8501"
+  - given-names: Dany
+    name-particle: A.
+    family-names: Issa
+    affiliation: Baylor College of Medicine
+    orcid: "https://orcid.org/0009-0008-0349-0478"
+  - given-names: Blake
+    name-particle: A.
+    family-names: Weido
+    affiliation: Baylor College of Medicine
+    orcid: "https://orcid.org/0009-0007-9515-1977"
+  - given-names: Anthony
+    name-particle: W.
+    family-names: Zoghbi
+    affiliation: Baylor College of Medicine
+    orcid: "https://orcid.org/0000-0002-3441-440X"
+year: 2026
+license: MIT
+repository-code: "https://github.com/ShahilPema/hmbs-psychiatric-association"
+# DOI placeholder — replace with the Zenodo DOI minted after the first
+# GitHub release is archived.
+# doi: 10.5281/zenodo.XXXXXXX
+keywords:
+  - acute intermittent porphyria
+  - HMBS
+  - phenome-wide association study
+  - rare variant burden analysis
+  - psychiatric genetics
+  - All of Us
+  - SCHEMA
+  - BipEx
+preferred-citation:
+  type: article
+  title: "A Genetic and Biochemical Reassessment of Acute Intermittent Porphyria in Psychiatric Disorders"
+  authors:
+    - given-names: Shahil
+      family-names: Pema
+      affiliation: Baylor College of Medicine
+      orcid: "https://orcid.org/0000-0002-0741-8501"
+    - given-names: Dany
+      name-particle: A.
+      family-names: Issa
+      affiliation: Baylor College of Medicine
+      orcid: "https://orcid.org/0009-0008-0349-0478"
+    - given-names: Blake
+      name-particle: A.
+      family-names: Weido
+      affiliation: Baylor College of Medicine
+      orcid: "https://orcid.org/0009-0007-9515-1977"
+    - given-names: Anthony
+      name-particle: W.
+      family-names: Zoghbi
+      affiliation: Baylor College of Medicine
+      orcid: "https://orcid.org/0000-0002-3441-440X"
+  year: 2026
+  journal: "British Journal of Psychiatry"
+  # DOI placeholder — replace with the article DOI on acceptance.
+  # doi: 10.0000/XXXXX

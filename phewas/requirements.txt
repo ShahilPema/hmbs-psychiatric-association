@@ -1,0 +1,24 @@
+# Python dependencies for AoU_HMBS_PheWAS.ipynb.
+#
+# This notebook is designed to run inside the All of Us Researcher Workbench,
+# where the standard "Hail Genomic Analysis" image already provides every
+# package below. The list is included for documentation and for anyone who
+# needs to inspect the analytical stack outside the Workbench. Versions are
+# intentionally unpinned because the Workbench image upgrades on its own
+# schedule; pin to whatever the active image ships if exact reproduction
+# matters.
+#
+# Pre-installed on the Workbench:
+google-cloud-bigquery
+pyarrow
+pyspark
+hail
+pandas
+numpy
+matplotlib
+scipy
+
+# RunFirths.R (referenced from the notebook via `Rscript RunFirths.R`)
+# requires R with the `logistf` package. The Workbench R kernel ships
+# logistf by default; if you run the R step elsewhere, install with:
+#   install.packages("logistf")
