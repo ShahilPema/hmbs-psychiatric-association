@@ -1,9 +1,15 @@
 #!/usr/bin/env python3
 """Standalone HMBS collapsing driver.
 
-Simplified port of src/Validation/SCHEMA/HMBS/run_hmbs_collapsing.py that consumes
-the pre-annotated parquets produced by `annotate_inputs.py` and never touches the
-wider Missense_Predictor repo.
+Consumes the pre-annotated parquets produced by `annotate_inputs.py` and runs
+the ancestry-stratified CMH burden test for HMBS.
+
+Variants in the input parquets are already restricted to the AoU rare-variant
+whitelist (AC <= 5 in All of Us). At run time, an additional row-level filter
+drops any variant whose total case + control AC across SCHEMA / BipEx strata
+exceeds `--row-ac-max` (default 5), so only rare variants in both the
+population reference and the case-control cohorts contribute to the burden
+test.
 """
 
 from __future__ import annotations

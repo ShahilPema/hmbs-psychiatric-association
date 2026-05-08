@@ -1,23 +1,21 @@
 """Pre-annotate the raw SCHEMA / BipEx / Combined HMBS parquets.
 
-Runs ONCE per ClinVar snapshot bump. Produces self-contained parquets that the
-end-user `run_collapsing.py` driver consumes without needing access to the ClinVar
-VCF or the AoU whitelist again.
+Produces self-contained parquets that `run_collapsing.py` consumes without
+needing access to the ClinVar VCF or the AoU whitelist at run time.
 
 Each output parquet has the following bits baked in:
-- Variants restricted to the AoU whitelist (HMBS_Combined_AoUFilt.parquet).
+- Variants restricted to the AoU whitelist (HMBS_Combined_AoUFilt.parquet) —
+  HMBS variants observed with AC <= 5 in All of Us, used as a rare-variant
+  population filter.
 - ClinVar annotations from the supplied VCF, joined onto every variant as
   `clinvar_vcf.CLNSIG`, `clinvar_vcf.CLNREVSTAT`, `clinvar_vcf.ALLELEID`,
   `clinvar_vcf.RS`.
 - `SNV` boolean column precomputed from the `alleles` list length.
 
-`AlphaMissense.am_pathogenicity` in the input parquet is used as-is — verified to
-match the upstream predictions checkpoint exactly for all HMBS variants where
-both are non-null (max |diff| = 0, identical null patterns).
+`AlphaMissense.am_pathogenicity` is read straight from the input parquet.
 
 A sidecar `annotation_manifest.json` records the provenance (paths, MD5s,
-timestamp, git SHA) so `run_collapsing.py` can log what snapshot the analysis
-was run against.
+timestamp, git SHA) of the snapshot used.
 """
 
 from __future__ import annotations

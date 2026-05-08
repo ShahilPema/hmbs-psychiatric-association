@@ -1,25 +1,9 @@
-"""HMBS CMH burden-test backend (standalone).
+"""HMBS CMH burden-test backend.
 
-Simplified from src/Tools/HMBS_cmh_r_backend.py of the Missense_Predictor repo.
-
-What was dropped and why (all validated to be equivalent on HMBS inputs):
-
-- PEXT filtering. Previously every mask was gated on PEXT.exp_prop_mean > 0.1, but the
-  input df set the column to pl.lit(1) immediately, so the predicate was always True.
-- multi_consequence logic. Previously every splice/stop/frameshift mask was gated on
-  multi_consequence == False, but the input df set the column to pl.lit(False)
-  immediately, so the predicate was always True.
-- Splice_nonSNV and Stop_nonSNV masks. Both fire only when SNV=False; verified on
-  SCHEMA, BipEx, and Combined parquets that no splice or stop_gained variant has
-  SNV=False, so they never contribute to the LoF-indel set for HMBS. This also
-  means frameshift is the only LoF-indel consequence, so a separate `lof_indel`
-  mask would be a duplicate of `frameshift` — it is omitted.
-- Predictions parquet join. The annotation step bakes AlphaMissense.am_pathogenicity
-  straight into the annotated input parquet.
-- AoU variant whitelist. Applied at annotation time, not runtime.
-- SNV flag computation. Pre-computed at annotation time from the alleles list.
-- Dead dicts AC_case_filter / AC_ctrl_filter. Never referenced anywhere.
-- Case_OR_pass_* / Control_OR_pass_* columns. Never referenced anywhere.
+Builds qualifying-variant masks (LoF, AlphaMissense tiers, MPC tiers, ClinVar
+P/LP, synonymous) on a pre-annotated SCHEMA / BipEx / Combined HMBS parquet and
+runs the exact Cochran-Mantel-Haenszel test (via rpy2), ancestry-stratified
+against gnomAD controls.
 """
 
 from __future__ import annotations
